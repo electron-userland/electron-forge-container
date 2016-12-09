@@ -1,0 +1,9 @@
+language: generic
+os: linux
+dist: trusty
+sudo: required
+services:
+- docker
+
+script:
+- sudo docker build . -t electron-forge
