@@ -10,6 +10,3 @@ RUN add-apt-repository ppa:alexlarsson/flatpak && \
     apt install -y --no-install-recommends \
         fakeroot dpkg flatpak-builder zip rpm snapcraft nodejs git python make gcc g++ && \
     rm -r /var/cache/apt/archives
-
-RUN flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo && \
-    flatpak install --runtime gnome org.freedesktop.Platform//1.4
