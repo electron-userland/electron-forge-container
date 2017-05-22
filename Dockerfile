@@ -1,4 +1,4 @@
-FROM debian:jessie-backports
+FROM debian:stretch
 
 RUN apt update
 RUN apt install -y --no-install-recommends software-properties-common curl apt-transport-https && \
