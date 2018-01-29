@@ -1,5 +1,7 @@
 FROM ubuntu:16.04
 
+ENV LC_ALL=C.UTF-8 LANG=C.UTF-8
+
 RUN apt update
 RUN apt install -y --no-install-recommends software-properties-common curl apt-transport-https && \
     rm -r /var/cache/apt/archives
