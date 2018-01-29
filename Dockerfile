@@ -9,4 +9,5 @@ RUN add-apt-repository ppa:alexlarsson/flatpak && \
     apt update && \
     apt install -y --no-install-recommends \
         fakeroot dpkg flatpak-builder zip rpm snapcraft nodejs git python make gcc g++ && \
-    rm -r /var/cache/apt/archives
+    rm -r /var/cache/apt/archives && \
+    snapcraft pull desktop-gtk2
