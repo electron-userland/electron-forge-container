@@ -1,4 +1,4 @@
-name: electronApp
+name: electron-app
 version: '1.0.0'
 summary: App summary
 description: |
@@ -8,7 +8,7 @@ grade: devel
 confinement: devmode
 
 parts:
-  electronApp:
+  electron-app:
     plugin: nil
     stage-packages:
     - libgconf2-4
