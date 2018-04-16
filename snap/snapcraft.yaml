@@ -1,0 +1,21 @@
+name: electronApp
+version: '1.0.0'
+summary: App summary
+description: |
+  App description
+
+grade: devel
+confinement: devmode
+
+parts:
+  electronApp:
+    plugin: nil
+    stage-packages:
+    - libgconf2-4
+    - libnotify4
+    - libnss3
+    - libpcre3
+    - libxss1
+    - libxtst6
+    after:
+    - desktop-gtk2
