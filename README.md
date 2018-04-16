@@ -13,11 +13,3 @@ FROM malept/electron-forge-container:latest
 
 # …other Docker commands…
 ```
-
-If you would like to create flatpak packages, you'll need to install the freedesktop platform
-runtime. It is not built into this image because it causes Docker Hub's build instances to time out.
-
-```docker
-RUN flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo && \
-    flatpak install --runtime gnome org.freedesktop.Platform//1.4
-```
