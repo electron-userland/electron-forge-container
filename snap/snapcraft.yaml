@@ -19,3 +19,4 @@ parts:
     - libxtst6
     after:
     - desktop-gtk2
+    - desktop-gtk3
