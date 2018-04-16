@@ -8,7 +8,7 @@ grade: devel
 confinement: devmode
 
 parts:
-  electron-app:
+  electron-deps:
     plugin: nil
     stage-packages:
     - libgconf2-4
@@ -17,5 +17,3 @@ parts:
     - libpcre3
     - libxss1
     - libxtst6
-    after:
-    - desktop-gtk2
