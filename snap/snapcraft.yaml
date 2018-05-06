@@ -10,6 +10,8 @@ confinement: devmode
 parts:
   electron-deps:
     plugin: nil
+    after:
+    - desktop-gtk2
     stage-packages:
     - libgconf2-4
     - libnotify4
