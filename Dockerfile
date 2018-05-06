@@ -14,5 +14,5 @@ RUN add-apt-repository ppa:alexlarsson/flatpak && \
         fakeroot dpkg flatpak-builder zip rpm snapcraft nodejs git python make gcc g++ && \
     rm -r /var/cache/apt/archives && \
     cd /tmp && \
-    snapcraft pull desktop-gtk2 electron-deps && \
+    snapcraft pull desktop-gtk3 electron-deps && \
     rm -r snap
