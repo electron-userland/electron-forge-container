@@ -4,7 +4,7 @@ ENV LC_ALL=C.UTF-8 LANG=C.UTF-8
 
 COPY snap /tmp/
 RUN apt update
-RUN apt install -y --no-install-recommends software-properties-common curl apt-transport-https && \
+RUN apt install -y --no-install-recommends software-properties-common curl apt-transport-https gpg-agent && \
     rm -r /var/cache/apt/archives
 RUN add-apt-repository ppa:alexlarsson/flatpak && \
     curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
