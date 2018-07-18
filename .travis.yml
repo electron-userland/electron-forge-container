@@ -7,3 +7,4 @@ services:
 
 script:
 - sudo docker build . -t electron-forge
+- sudo docker run -t electron-forge which npm
