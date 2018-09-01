@@ -13,7 +13,7 @@ RUN add-apt-repository ppa:alexlarsson/flatpak && \
     apt install -y --no-install-recommends \
         fakeroot dpkg flatpak-builder zip rpm snapcraft nodejs git python make gcc g++ && \
     rm -r /var/cache/apt/archives && \
-    flatpak install --user --no-deps --yes --arch x86_64 --from https://raw.githubusercontent.com/endlessm/flatpak-bundler/master/refs/freedesktop-sdk-1.4.flatpakref && \
+    flatpak install --user --no-deps --assumeyes --arch x86_64 --from https://raw.githubusercontent.com/endlessm/flatpak-bundler/master/refs/freedesktop-sdk-1.4.flatpakref && \
     cd /tmp && \
     snapcraft pull desktop-gtk3 electron-deps && \
     rm -r snap
