@@ -15,7 +15,7 @@ RUN add-apt-repository ppa:alexlarsson/flatpak && \
     rm -r /var/cache/apt/archives && \
     flatpak install --user --no-deps --assumeyes --arch x86_64 --from https://raw.githubusercontent.com/endlessm/flatpak-bundler/master/refs/freedesktop-sdk-1.4.flatpakref && \
     flatpak install --user --no-deps --assumeyes --arch x86_64 --from https://raw.githubusercontent.com/endlessm/flatpak-bundler/master/refs/freedesktop-runtime-1.4.flatpakref && \
-    flatpak install --user --no-deps --arch x86_64 --from https://s3-us-west-2.amazonaws.com/electron-flatpak.endlessm.com/electron-base-app-master.flatpakref && \
+    flatpak install --user --no-deps --assumeyes --arch x86_64 --from https://s3-us-west-2.amazonaws.com/electron-flatpak.endlessm.com/electron-base-app-master.flatpakref && \
     cd /tmp && \
     snapcraft pull desktop-gtk3 electron-deps && \
     rm -r snap
