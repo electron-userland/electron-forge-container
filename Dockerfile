@@ -12,7 +12,8 @@ RUN add-apt-repository ppa:alexlarsson/flatpak && \
     add-apt-repository "deb http://archive.ubuntu.com/ubuntu/ xenial-proposed main" && \
     apt update && \
     apt install -y --no-install-recommends \
-        fakeroot dpkg flatpak-builder zip rpm snapcraft/xenial-proposed nodejs git python make gcc g++ && \
+        fakeroot dpkg flatpak-builder zip rpm nodejs git python make gcc g++ && \
+    apt install -y --no-install-recommends -t xenial-proposed snapcraft && \
     rm -r /var/cache/apt/archives && \
     flatpak install --user --no-deps --assumeyes --arch x86_64 --from https://raw.githubusercontent.com/endlessm/flatpak-bundler/master/refs/freedesktop-sdk-1.4.flatpakref && \
     flatpak install --user --no-deps --assumeyes --arch x86_64 --from https://raw.githubusercontent.com/endlessm/flatpak-bundler/master/refs/freedesktop-runtime-1.4.flatpakref && \
