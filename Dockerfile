@@ -9,6 +9,8 @@ RUN apt install -y --no-install-recommends software-properties-common curl apt-t
 RUN add-apt-repository ppa:alexlarsson/flatpak && \
     curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
     add-apt-repository "deb https://deb.nodesource.com/node_6.x xenial main" && \
+    curl -s https://bintray.com/user/downloadSubjectPublicKey?username=bintray | apt-key add - && \
+    add-apt-repository "deb https://dl.bintray.com/electronuserland/rpm-xenial xenial main" && \
     apt update && \
     apt install -y --no-install-recommends \
         fakeroot dpkg flatpak-builder zip rpm snapcraft nodejs git python make gcc g++ && \
