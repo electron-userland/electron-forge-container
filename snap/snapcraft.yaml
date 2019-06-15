@@ -13,9 +13,9 @@ parts:
     after:
     - desktop-gtk3
     stage-packages:
-    - libgconf2-4
     - libnotify4
     - libnss3
     - libpcre3
+    - libuuid1
     - libxss1
     - libxtst6
