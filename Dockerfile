@@ -15,9 +15,6 @@ RUN add-apt-repository ppa:alexlarsson/flatpak && \
     apt install -y --no-install-recommends \
         fakeroot dpkg flatpak-builder unzip zip rpm snapcraft nodejs git python make gcc g++ && \
     apt clean && \
-    flatpak install --user --no-deps --assumeyes --arch x86_64 --from https://raw.githubusercontent.com/endlessm/flatpak-bundler/master/refs/freedesktop-sdk-1.4.flatpakref && \
-    flatpak install --user --no-deps --assumeyes --arch x86_64 --from https://raw.githubusercontent.com/endlessm/flatpak-bundler/master/refs/freedesktop-runtime-1.4.flatpakref && \
-    flatpak install --user --no-deps --assumeyes --arch x86_64 --from https://s3-us-west-2.amazonaws.com/electron-flatpak.endlessm.com/electron-base-app-master.flatpakref && \
     flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && \
     flatpak install --user --no-deps --assumeyes runtime/org.freedesktop.Sdk/x86_64/1.6 && \
     flatpak install --user --no-deps --assumeyes runtime/org.freedesktop.Platform/x86_64/1.6 && \
