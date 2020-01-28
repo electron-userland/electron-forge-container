@@ -11,7 +11,7 @@ RUN add-apt-repository ppa:alexlarsson/flatpak && \
     add-apt-repository "deb https://deb.nodesource.com/node_10.x xenial main" && \
     apt update && \
     apt install -y --no-install-recommends \
-        fakeroot dpkg flatpak-builder unzip zip rpm snapcraft nodejs git python make gcc g++ && \
+        fakeroot dpkg flatpak-builder unzip zip rpm snapcraft nodejs git python make gcc g++ elfutils && \
     apt clean && \
     flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && \
     flatpak install --system --no-deps --assumeyes runtime/org.freedesktop.Sdk/x86_64/19.08 && \
