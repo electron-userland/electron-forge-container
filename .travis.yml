@@ -1,7 +1,6 @@
 language: generic
 os: linux
-dist: trusty
-sudo: required
+dist: bionic
 services:
 - docker
 
