@@ -8,7 +8,7 @@ RUN apt install -y --no-install-recommends software-properties-common curl apt-t
     apt clean
 RUN add-apt-repository ppa:alexlarsson/flatpak && \
     curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
-    add-apt-repository "deb https://deb.nodesource.com/node_10.x xenial main" && \
+    add-apt-repository "deb https://deb.nodesource.com/node_10.x bionic main" && \
     apt update && \
     apt install -y --no-install-recommends \
         fakeroot dpkg flatpak-builder unzip zip rpm snapcraft nodejs git python make gcc g++ elfutils && \
