@@ -10,10 +10,11 @@ RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
     add-apt-repository "deb https://deb.nodesource.com/node_10.x focal main" && \
     apt update && \
     DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
-        fakeroot dpkg flatpak-builder unzip zip rpm nodejs git python make gcc g++ elfutils && \
+        fakeroot dpkg flatpak-builder unzip zip rpm nodejs git python make gcc g++ elfutils gdebi-core && \
     curl -sLO https://github.com/malept/snapcraft/releases/download/v4.0.3-2/snapcraft.deb && \
-    dpkg -i snapcraft.deb && \
+    gdebi --non-interactive snapcraft.deb && \
     rm snapcraft.deb && \
+    apt remove --yes gdebi-core && \
     apt clean && \
     flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && \
     flatpak install --system --no-deps --assumeyes runtime/org.freedesktop.Sdk/x86_64/19.08 && \
