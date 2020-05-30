@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 ENV LC_ALL=C.UTF-8 LANG=C.UTF-8
 
@@ -8,11 +8,12 @@ RUN apt install -y --no-install-recommends software-properties-common curl apt-t
     apt clean
 RUN add-apt-repository ppa:alexlarsson/flatpak && \
     curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
-    add-apt-repository "deb https://deb.nodesource.com/node_10.x bionic main" && \
+    add-apt-repository "deb https://deb.nodesource.com/node_10.x focal main" && \
     apt update && \
     apt install -y --no-install-recommends \
-        fakeroot dpkg flatpak-builder unzip zip rpm snapcraft nodejs git python make gcc g++ elfutils && \
+        fakeroot dpkg flatpak-builder unzip zip rpm nodejs git python make gcc g++ elfutils && \
     apt clean && \
+    snap install --candidate snapcraft && \
     flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && \
     flatpak install --system --no-deps --assumeyes runtime/org.freedesktop.Sdk/x86_64/19.08 && \
     flatpak install --system --no-deps --assumeyes runtime/org.freedesktop.Platform/x86_64/19.08 && \
