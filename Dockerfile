@@ -10,7 +10,7 @@ RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
     add-apt-repository "deb https://deb.nodesource.com/node_10.x focal main" && \
     apt update && \
     DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
-        fakeroot dpkg flatpak-builder unzip zip rpm snapcraft nodejs git python make gcc g++ elfutils && \
+        fakeroot dpkg flatpak-builder unzip zip rpm nodejs git python make gcc g++ elfutils && \
     curl -sLO https://github.com/malept/snapcraft/releases/download/v4.0.3-1/snapcraft.deb && \
     dpkg -i snapcraft.deb && \
     rm snapcraft.deb && \
