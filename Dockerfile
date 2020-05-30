@@ -12,7 +12,7 @@ RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
     DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
         fakeroot dpkg flatpak-builder unzip zip rpm nodejs git python make gcc g++ elfutils && \
     curl -sLO https://github.com/malept/snapcraft/releases/download/v4.0.3-3/snapcraft.deb && \
-    sudo apt install --yes ./snapcraft.deb && \
+    apt install --yes ./snapcraft.deb && \
     rm snapcraft.deb && \
     apt clean && \
     flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && \
