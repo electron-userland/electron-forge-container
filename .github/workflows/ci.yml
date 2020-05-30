@@ -16,4 +16,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build Docker container
-        run: sudo docker build . -t electron-forge
+        run: docker build . -t electron-forge
