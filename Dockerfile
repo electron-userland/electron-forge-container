@@ -11,9 +11,10 @@ RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
     apt update && \
     DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
         fakeroot dpkg flatpak-builder unzip zip rpm nodejs git python make gcc g++ elfutils && \
+    curl -sLO http://mirrors.kernel.org/ubuntu/pool/universe/p/python-raven/python3-raven_6.3.0-2_all.deb && \
     curl -sLO https://github.com/malept/snapcraft/releases/download/v4.0.3-10/snapcraft.deb && \
-    apt install --yes ./snapcraft.deb && \
-    rm snapcraft.deb && \
+    apt install --yes ./python3-raven*.deb ./snapcraft.deb && \
+    rm python3-raven*.deb snapcraft.deb && \
     apt clean && \
     flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && \
     flatpak install --system --no-deps --assumeyes runtime/org.freedesktop.Sdk/x86_64/19.08 && \
