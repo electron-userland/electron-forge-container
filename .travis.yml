@@ -1,8 +1,0 @@
-language: generic
-os: linux
-dist: bionic
-services:
-- docker
-
-script:
-- sudo docker build . -t electron-forge
